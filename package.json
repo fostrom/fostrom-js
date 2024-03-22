@@ -1,0 +1,29 @@
+{
+  "name": "fostrom",
+  "version": "0.0.2",
+  "description": "Fostrom's Official Device SDK for JS. Fostrom is an IoT Cloud Platform. Check it out on fostrom.io",
+  "keywords": [
+    "fostrom",
+    "device",
+    "sdk",
+    "iot",
+    "cloud",
+    "fleet",
+    "mqtt",
+    "websockets"
+  ],
+  "homepage": "https://docs.fostrom.io/libs/js",
+  "license": "MIT",
+  "author": "Fostrom <support@fostrom.io> (https://fostrom.io)",
+  "main": "index.js",
+  "type": "module",
+  "files": [
+    "index.js",
+    "mqtt.js",
+    "config.js"
+  ],
+  "dependencies": {
+    "mqtt": "^5.5.0",
+    "msgpackr": "^1.10.1"
+  }
+}
