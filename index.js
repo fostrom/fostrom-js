@@ -1,6 +1,6 @@
-import { pack } from 'msgpackr'
-import { get_config } from './config.js'
-import { start } from './mqtt.js'
+const { pack } = require('msgpackr')
+const { get_config } = require('./config.js')
+const { start } = require('./mqtt.js')
 
 class Fostrom {
   constructor(config) {
@@ -27,4 +27,4 @@ class Fostrom {
   }
 }
 
-export default Fostrom
+module.exports = Fostrom

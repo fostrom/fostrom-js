@@ -1,5 +1,5 @@
-import mqtt from 'mqtt'
-import { unpack, pack } from 'msgpackr'
+const mqtt = require('mqtt')
+const { unpack, pack } = require('msgpackr')
 
 const invalid_device_creds_error = new Error(
   'Invalid Device Credentials. Please re-check the device credentials.'
@@ -122,9 +122,11 @@ function attachHooks(instance, config, client) {
   })
 }
 
-export async function start(instance, config) {
+async function start(instance, config) {
   let client = await connect(config)
   attachHooks(instance, config, client)
   if (await subscribe(config, client)) { config.callbacks.connected() }
   return client
 }
+
+module.exports = { start }

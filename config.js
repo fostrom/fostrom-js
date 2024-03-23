@@ -94,9 +94,9 @@ function get_connect_urls(config) {
   return { tcp_url, ws_url }
 }
 
-/* Exported Function */
+/* Get Config */
 
-export function get_config(config) {
+function get_config(config) {
   const { tcp_url, ws_url } = get_connect_urls(config)
 
   return {
@@ -113,3 +113,5 @@ export function get_config(config) {
     ws_url: ws_url
   }
 }
+
+module.exports = { get_config }
